@@ -1,5 +1,7 @@
 package alapmuvgyak;
 
+import javax.swing.JOptionPane;
+
 public class Muveletek extends javax.swing.JFrame {
 
     /**
@@ -97,6 +99,11 @@ public class Muveletek extends javax.swing.JFrame {
         );
 
         btnUj.setText("Új feladat");
+        btnUj.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUjActionPerformed(evt);
+            }
+        });
 
         btnMegoldas.setText("Megoldás");
         btnMegoldas.addActionListener(new java.awt.event.ActionListener() {
@@ -214,10 +221,20 @@ public class Muveletek extends javax.swing.JFrame {
 
         buttonGroup1.add(mnuMuveletOsszeadas);
         mnuMuveletOsszeadas.setText("Összeadás");
+        mnuMuveletOsszeadas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuMuveletOsszeadasActionPerformed(evt);
+            }
+        });
         mnuMuvelet.add(mnuMuveletOsszeadas);
 
         buttonGroup1.add(mnuMuveletKivonas);
         mnuMuveletKivonas.setText("Kivonás");
+        mnuMuveletKivonas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuMuveletKivonasActionPerformed(evt);
+            }
+        });
         mnuMuvelet.add(mnuMuveletKivonas);
 
         buttonGroup1.add(mnuMuveletSzorzas);
@@ -231,6 +248,11 @@ public class Muveletek extends javax.swing.JFrame {
 
         buttonGroup1.add(mnuMuveletOsztas);
         mnuMuveletOsztas.setText("Osztás");
+        mnuMuveletOsztas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuMuveletOsztasActionPerformed(evt);
+            }
+        });
         mnuMuvelet.add(mnuMuveletOsztas);
 
         jMenuBar1.add(mnuMuvelet);
@@ -272,7 +294,7 @@ public class Muveletek extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEllenorzesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEllenorzesActionPerformed
-        
+        lblValasz.setText("Jó vagy rossz a válasz");
     }//GEN-LAST:event_btnEllenorzesActionPerformed
 
     private void btnMegoldasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMegoldasActionPerformed
@@ -282,6 +304,27 @@ public class Muveletek extends javax.swing.JFrame {
     private void mnuMuveletSzorzasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuMuveletSzorzasActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_mnuMuveletSzorzasActionPerformed
+
+    private void mnuMuveletOsszeadasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuMuveletOsszeadasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mnuMuveletOsszeadasActionPerformed
+
+    private void mnuMuveletKivonasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuMuveletKivonasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mnuMuveletKivonasActionPerformed
+
+    private void mnuMuveletOsztasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuMuveletOsztasActionPerformed
+
+        int a = 40;
+        int b = 5;
+        lblFeladat.setText(a + " / " + b + " =");
+        
+    }//GEN-LAST:event_mnuMuveletOsztasActionPerformed
+
+    private void btnUjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUjActionPerformed
+        JOptionPane.showMessageDialog(this, "Új feladat generálása", "Új feladat", 1);
+        
+    }//GEN-LAST:event_btnUjActionPerformed
 
     /**
      * @param args the command line arguments
@@ -354,4 +397,8 @@ public class Muveletek extends javax.swing.JFrame {
     private javax.swing.JPanel pnlGyakorlas;
     private javax.swing.JTextField txtEredmeny;
     // End of variables declaration//GEN-END:variables
+
+    private void osztas() {
+        
+    }
 }
